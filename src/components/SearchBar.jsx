@@ -1,21 +1,23 @@
-export function SearchBar({ searchTerm, setSearchTerm, onSearch }) {
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    onSearch();
-  };
-
+export function SearchBar({ searchTerm, setSearchTerm }) {
   return (
-    <form onSubmit={handleSubmit} style={{ marginBottom: '20px', display: 'flex', gap: '10px' }}>
+    <div style={{ marginBottom: '30px', display: 'flex', justifyContent: 'center' }}>
       <input
         type="text"
-        placeholder="Buscar videojuego..."
+        placeholder="Buscar personaje (ej. Richtofen, Dempsey)..."
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
-        style={{ padding: '8px 12px', fontSize: '16px', borderRadius: '4px', border: '1px solid #ccc', flex: 1 }}
+        style={{
+          width: '100%',
+          maxWidth: '500px',
+          padding: '12px 20px',
+          fontSize: '16px',
+          borderRadius: '25px',
+          border: '1px solid #334155',
+          backgroundColor: '#1e293b',
+          color: '#fff',
+          outline: 'none'
+        }}
       />
-      <button type="submit" style={{ padding: '8px 16px', fontSize: '16px', cursor: 'pointer' }}>
-        Buscar
-      </button>
-    </form>
+    </div>
   );
 }

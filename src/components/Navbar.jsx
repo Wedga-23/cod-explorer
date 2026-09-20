@@ -1,7 +1,9 @@
 export function Navbar() {
   return (
-    <nav style={{ padding: '15px 20px', backgroundColor: '#1f2937', color: 'white', marginBottom: '20px' }}>
-      <h2 style={{ margin: 0 }}>🎮 COD Explorer</h2>
+    <nav style={{ padding: '20px', backgroundColor: '#0f172a', borderBottom: '1px solid #1e293b', textAlign: 'center' }}>
+      <h1 style={{ margin: 0, color: '#f8fafc', fontSize: '2rem', fontWeight: 'bold' }}>
+        🧟‍♂️ Call of Duty: Zombies Wiki
+      </h1>
     </nav>
   );
 }
