@@ -5,6 +5,49 @@ export function GameCard({ item, type, onSelect }) {
     return '#eab308';
   };
 
+  // Generador de portadas temáticas garantizadas de COD Zombies
+  const getFallbackBanner = () => {
+    const bgColors = {
+      personajes: 'linear-gradient(135deg, #450a0a 0%, #18181b 100%)',
+      mapas: 'linear-gradient(135deg, #1e1b4b 0%, #09090b 100%)',
+      armas: 'linear-gradient(135deg, #064e3b 0%, #09090b 100%)'
+    };
+
+    const icons = {
+      personajes: '☣️',
+      mapas: '🧟',
+      armas: '⚡'
+    };
+
+    return (
+      <div style={{
+        width: '100%',
+        height: '180px',
+        background: bgColors[type] || 'linear-gradient(135deg, #182232 0%, #0b0f19 100%)',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        borderBottom: '2px solid #3f3f46',
+        position: 'relative'
+      }}>
+        <span style={{ fontSize: '3rem', filter: 'drop-shadow(0 0 10px rgba(239, 68, 68, 0.5))' }}>
+          {icons[type] || '🎮'}
+        </span>
+        <span style={{ 
+          marginTop: '8px', 
+          fontSize: '0.75rem', 
+          letterSpacing: '2px', 
+          color: '#e4e4e7', 
+          fontWeight: 'bold',
+          textTransform: 'uppercase'
+        }}>
+          {item.name}
+        </span>
+      </div>
+    );
+  };
+
   return (
     <div 
       onClick={() => onSelect(item)}
@@ -27,15 +70,9 @@ export function GameCard({ item, type, onSelect }) {
         e.currentTarget.style.borderColor = '#283548';
       }}
     >
-      <img
-        src={item.image}
-        alt={item.name}
-        onError={(e) => {
-          e.target.onerror = null;
-          e.target.src = 'https://picsum.photos/600/400?blur=2';
-        }}
-        style={{ width: '100%', height: '180px', objectFit: 'cover' }}
-      />
+      {/* Banner visual resistente a bloqueos */}
+      {getFallbackBanner()}
+
       <div style={{ padding: '15px', display: 'flex', flexDirection: 'column', gap: '8px' }}>
         <h3 style={{ margin: 0, color: '#f8fafc', fontSize: '1.1rem' }}>{item.name}</h3>
         
@@ -55,7 +92,7 @@ export function GameCard({ item, type, onSelect }) {
         )}
 
         <span style={{ fontSize: '0.75rem', color: '#ef4444', fontWeight: 'bold', marginTop: '5px' }}>
-          Ver detalles →
+          Ver expedientes →
         </span>
       </div>
     </div>
