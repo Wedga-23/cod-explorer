@@ -1,4 +1,10 @@
 export function GameCard({ item, type, onSelect }) {
+  const getStatusColor = (status) => {
+    if (status === 'Vivo') return '#22c55e';
+    if (status === 'Fallecido') return '#ef4444';
+    return '#eab308';
+  };
+
   return (
     <div 
       onClick={() => onSelect(item)}
@@ -24,10 +30,10 @@ export function GameCard({ item, type, onSelect }) {
       <img
         src={item.image}
         alt={item.name}
+        referrerPolicy="no-referrer"
         onError={(e) => {
-          // Fallback en caso de bloqueo de red
           e.target.onerror = null;
-          e.target.src = 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Biohazard_symbol.svg/800px-Biohazard_symbol.svg.png';
+          e.target.src = 'https://images.unsplash.com/photo-1579373903781-fd5c0c30c4cd?auto=format&fit=crop&w=600&q=80';
         }}
         style={{ width: '100%', height: '180px', objectFit: 'cover', backgroundColor: '#0f172a' }}
       />
@@ -35,9 +41,10 @@ export function GameCard({ item, type, onSelect }) {
         <h3 style={{ margin: 0, color: '#f8fafc', fontSize: '1.1rem' }}>{item.name}</h3>
         
         {type === 'personajes' && (
-          <p style={{ margin: 0, fontSize: '0.85rem', color: '#94a3b8' }}>
-            Año: {item.year} • {item.developer}
-          </p>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '0.85rem', color: '#94a3b8' }}>
+            <span style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: getStatusColor(item.status) }}></span>
+            {item.status} • {item.faction}
+          </div>
         )}
 
         {type === 'mapas' && (
@@ -49,7 +56,7 @@ export function GameCard({ item, type, onSelect }) {
         )}
 
         <span style={{ fontSize: '0.75rem', color: '#ef4444', fontWeight: 'bold', marginTop: '5px' }}>
-          Ver expedientes →
+          Ver detalles →
         </span>
       </div>
     </div>

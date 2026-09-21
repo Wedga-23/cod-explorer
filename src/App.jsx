@@ -8,90 +8,90 @@ const ZOMBIES_DATA = {
   personajes: [
     {
       id: 1,
-      name: 'Call of Duty: World at War',
-      year: '2008',
-      developer: 'Treyarch',
-      image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/US_Marine_Corps_emblem.svg/800px-US_Marine_Corps_emblem.svg.png',
-      description: 'El nacimiento del modo Zombies como un huevo de pascua llamado "Nacht der Untoten". Introdujo las rondas, la caja misteriosa y las ventajas icónicas como Juggernog.',
-      details: { mapas_destacados: 'Nacht der Untoten, Verrückt, Shi No Numa, Der Riese', importancia: 'Origen del Elemento 115' }
+      name: 'Edward Richtofen',
+      status: 'Fallecido',
+      faction: 'Ultimis / Primis',
+      image: 'https://images.unsplash.com/photo-1579373903781-fd5c0c30c4cd?auto=format&fit=crop&w=600&q=80',
+      description: 'Científico sociópata del Grupo 935. Obsesionado con el Elemento 115, la tecnología de teletransporte y el control total del Éter.',
+      details: { aparicion: 'Shi No Numa', rol: 'Científico Jefe', universo: 'Línea de Tiempo del Éter' }
     },
     {
       id: 2,
-      name: 'Call of Duty: Black Ops',
-      year: '2010',
-      developer: 'Treyarch',
-      image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Red_star.svg/800px-Red_star.svg.png',
-      description: 'Consolidó el modo con una narrativa profunda del Éter, cinemáticas, easter eggs complejos y mapas icónicos como Kino der Toten, Shangri-La y Moon.',
-      details: { mapas_destacados: 'Kino der Toten, FIVE, Ascension, Call of the Dead, Moon', innovacion: 'Easter Eggs principales con logros' }
+      name: 'Tank Dempsey',
+      status: 'Fallecido',
+      faction: 'Ultimis / Primis',
+      image: 'https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=600&q=80',
+      description: 'Suboficial de los Marines de EE. UU. Capturado en Verrückt, destaca por su agresividad, el manejo de armas pesadas y sus frases icónicas.',
+      details: { aparicion: 'Verrückt', rol: 'Infantería Pesada', universo: 'Línea de Tiempo del Éter' }
     },
     {
       id: 3,
-      name: 'Call of Duty: Black Ops II',
-      year: '2012',
-      developer: 'Treyarch',
-      image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Imperial_Seal_of_Japan.svg/800px-Imperial_Seal_of_Japan.svg.png',
-      description: 'Expandió el universo con la tripulación Victis y el arco Primis en Origins. Introdujo mecánicas complejas de construcción, bastones elementales y movilidad en transporte.',
-      details: { mapas_destacados: 'Tranzit, Die Rise, Mob of the Dead, Buried, Origins', innovacion: 'Construcción de armas y herramientas' }
+      name: 'Nikolai Belinski',
+      status: 'Fallecido',
+      faction: 'Ultimis / Primis',
+      image: 'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=600&q=80',
+      description: 'Soldado del Ejército Rojo con un pasado complejo. A pesar de su carácter trágico, se convierte en la clave para cerrar el ciclo del Éter.',
+      details: { aparicion: 'Shi No Numa', rol: 'Líder / Infantería', universo: 'Línea de Tiempo del Éter' }
     },
     {
       id: 4,
-      name: 'Call of Duty: Black Ops III',
-      year: '2015',
-      developer: 'Treyarch',
-      image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/German_Officer_WWII_Insignia_placeholder.svg/800px-German_Officer_WWII_Insignia_placeholder.svg.png',
-      description: 'Considerada la cumbre del modo Zombies por la comunidad. Añadió los GobbleGums, la remasterización Zombies Chronicles y misiones narrativas épicas.',
-      details: { mapas_destacados: 'Shadows of Evil, Der Eisendrache, Gorod Krovi, Revelations', innovacion: 'Sistema de GobbleGums y Mod Support' }
+      name: 'Takeo Masaki',
+      status: 'Fallecido',
+      faction: 'Ultimis / Primis',
+      image: 'https://images.unsplash.com/photo-1563089145-599997674d42?auto=format&fit=crop&w=600&q=80',
+      description: 'Oficial del Ejército Imperial Japonés que se rige por un estricto código de honor Bushido y la lealtad absoluta al Emperador.',
+      details: { aparicion: 'Shi No Numa', rol: 'Oficial / Espadachín', universo: 'Línea de Tiempo del Éter' }
     },
     {
       id: 5,
-      name: 'Call of Duty: Black Ops 4',
-      year: '2018',
-      developer: 'Treyarch',
-      image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Biohazard_symbol.svg/800px-Biohazard_symbol.svg.png',
-      description: 'Cerró la historia clásica del Éter en Tag der Toten e inició la saga Caos. Rediseñó el sistema de ventajas, el elixir y las clases iniciales.',
-      details: { mapas_destacados: 'IX, Voyage of Despair, Blood of the Dead, Ancient Evil', innovacion: 'Elección de elixires y armas iniciales' }
+      name: 'Samantha Maxis',
+      status: 'Vivo',
+      faction: 'Requiem / Éter Oscuro',
+      image: 'https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=600&q=80',
+      description: 'Hija del Dr. Ludvig Maxis. Atrapada en la dimensión del Éter Oscuro, adquirió habilidades sobrenaturales y gran control telequinético.',
+      details: { aparicion: 'Der Riese', rol: 'Agente Especial', universo: 'Dark Aether Saga' }
     },
     {
       id: 6,
-      name: 'Call of Duty: Black Ops Cold War',
-      year: '2020',
-      developer: 'Treyarch',
-      image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Aether_Symbol_placeholder.png/600px-Aether_Symbol_placeholder.png',
-      description: 'Dio inicio a la era del Éter Oscuro con la organización Requiem y el modo Brote (Outbreak) en mapas de mundo abierto.',
-      details: { mapas_destacados: 'Die Maschine, Firebase Z, Mauer der Toten, Forsaken', innovacion: 'Modo Brote (Outbreak) y exfiltración' }
+      name: 'Dr. Ludvig Maxis',
+      status: 'Fallecido',
+      faction: 'Grupo 935',
+      image: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=600&q=80',
+      description: 'Fundador y cerebro intelectual del Grupo 935. Lideró la investigación científica inicial sobre el Elemento 115.',
+      details: { aparicion: 'Der Riese', rol: 'Director de Investigación', universo: 'Línea de Tiempo del Éter' }
     }
   ],
   mapas: [
     {
       id: 101,
       name: 'Nacht der Untoten',
-      game: 'World at War (2008)',
-      image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Aether_Symbol_placeholder.png/600px-Aether_Symbol_placeholder.png',
-      description: 'Un aeródromo militar destruido rodeado de niebla. El mapa donde nació la leyenda sin ventajas ni Pack-a-Punch.',
-      details: { ubicacion: 'Alemania', novedad: 'Primer mapa en la historia', trampa: 'Ninguna' }
+      game: 'World at War',
+      image: 'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=600&q=80',
+      description: 'Un aeródromo militar destruido rodeado de niebla. El mapa original donde nació el modo Zombies sin ventajas ni Pack-a-Punch.',
+      details: { ubicacion: 'Alemania', novedad: 'Primer mapa Zombie', trampa: 'Ninguna' }
     },
     {
       id: 102,
       name: 'Kino der Toten',
-      game: 'Black Ops 1 (2010)',
-      image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Biohazard_symbol.svg/800px-Biohazard_symbol.svg.png',
-      description: 'Un teatro de operaciones nazi abandonado en Berlín con el icónico proyector de cine y el teletransportador central.',
+      game: 'Black Ops 1',
+      image: 'https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?auto=format&fit=crop&w=600&q=80',
+      description: 'Un antiguo teatro abandonado en Berlín. Cuenta con escenario, vestíbulo, teletransportador central y el icónico proyector de cine.',
       details: { ubicacion: 'Berlín, Alemania', ventaja: 'Juggernog', icono: 'Teletransportador' }
     },
     {
       id: 103,
       name: 'Der Riese',
       game: 'World at War / BO1 / BO3',
-      image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/German_Officer_WWII_Insignia_placeholder.svg/800px-German_Officer_WWII_Insignia_placeholder.svg.png',
-      description: 'La instalación principal del Grupo 935. Aquí se creó la máquina Pack-a-Punch para mejorar las armas.',
-      details: { ubicacion: 'Breslau, Polonia', novedad: 'Pack-a-Punch', trampa: 'Barrera Eléctrica' }
+      image: 'https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=600&q=80',
+      description: 'Instalación científica secreta del Grupo 935 en Polonia. Es la cuna de la máquina Pack-a-Punch para mejorar armas.',
+      details: { ubicacion: 'Breslau', novedad: 'Pack-a-Punch', trampa: 'Barrera Eléctrica' }
     },
     {
       id: 104,
       name: 'Origins',
       game: 'Black Ops 2 / BO3',
-      image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/US_Marine_Corps_emblem.svg/800px-US_Marine_Corps_emblem.svg.png',
-      description: 'Las trincheras de la Primera Guerra Mundial con tres Gigantes de Acero y la creación de los 4 Bastones Elementales.',
+      image: 'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=600&q=80',
+      description: 'Las trincheras de la Primera Guerra Mundial en Francia. Destaca por tres Gigantes de Acero y los cuatro Bastones Elementales.',
       details: { ubicacion: 'Francia', arma_clave: 'Bastones Elementales', enemigo: 'Panzer Soldat' }
     }
   ],
@@ -100,25 +100,25 @@ const ZOMBIES_DATA = {
       id: 201,
       name: 'Ray Gun (Arma de Rayos)',
       category: 'Arma Maravilla',
-      image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Biohazard_symbol.svg/800px-Biohazard_symbol.svg.png',
-      description: 'El arma emblemática presente en prácticamente todos los juegos de la saga. Dispara plasma verde con daño de área.',
+      image: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=600&q=80',
+      description: 'Dispositivo futurista creado por H. Porter. Dispara carcasas de plasma verde con alto daño de área.',
       details: { municion: 'Célula 115', mejorada: 'Porter X2 Ray Gun', dano: 'Extremo' }
     },
     {
       id: 202,
       name: 'Wunderwaffe DG-2',
       category: 'Arma Maravilla',
-      image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/German_Officer_WWII_Insignia_placeholder.svg/800px-German_Officer_WWII_Insignia_placeholder.svg.png',
-      description: 'Diseñada por Edward Richtofen. Lanza descargas de 200,000 amperios que se encadenan hasta en 10 zombis.',
-      details: { capacidad: '3 Disparos', mejorada: 'DG-3 Juggernaut', efecto: 'Muerte instantánea' }
+      image: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=600&q=80',
+      description: 'Inventada por Edward Richtofen. Genera una corriente eléctrica de 200,000 amperios que se encadena en múltiples enemigos.',
+      details: { capacidad: '3 Disparos', mejorada: 'DG-3 Juggernaut', efecto: 'Muerte instantánea en cadena' }
     },
     {
       id: 203,
       name: 'Monkey Bomb',
       category: 'Equipamiento Táctico',
-      image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Red_star.svg/800px-Red_star.svg.png',
-      description: 'Juguete musical modificado con explosivos. Atrae a los hordas de zombis con música antes de detonar.',
-      details: { tipo: 'Granada Táctica', tiempo: '8 Segundos', uso: 'Rescate' }
+      image: 'https://images.unsplash.com/photo-1563089145-599997674d42?auto=format&fit=crop&w=600&q=80',
+      description: 'Juguete musical de mono con platillos modificado con explosivos. Atrae a los zombis cantando antes de detonar.',
+      details: { tipo: 'Granada Táctica', tiempo: '8 Segundos', uso: 'Rescate de emergencia' }
     }
   ]
 };
@@ -140,7 +140,7 @@ function App() {
       <main style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 20px 40px' }}>
         <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '20px' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))', gap: '20px' }}>
           {filteredData.length > 0 ? (
             filteredData.map((item) => (
               <GameCard 
