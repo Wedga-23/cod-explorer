@@ -11,7 +11,7 @@ const ZOMBIES_DATA = {
       name: 'Edward Richtofen',
       status: 'Fallecido',
       faction: 'Ultimis / Primis',
-      image: 'https://images.unsplash.com/photo-1579373903781-fd5c0c30c4cd?auto=format&fit=crop&w=600&q=80',
+      image: 'https://static.wikia.nocookie.net/callofduty/images/e/e0/Richtofen_BO4.png',
       description: 'Científico alemán del Grupo 935. Obsesionado con el elemento 115 y el control del Éter Oscuro.',
       details: { aparicion: 'Shi No Numa', rol: 'Científico', universo: 'Éter Aislado' }
     },
@@ -20,16 +20,34 @@ const ZOMBIES_DATA = {
       name: 'Tank Dempsey',
       status: 'Fallecido',
       faction: 'Ultimis / Primis',
-      image: 'https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=600&q=80',
+      image: 'https://static.wikia.nocookie.net/callofduty/images/8/87/Dempsey_BO4.png',
       description: 'Marine de los Estados Unidos. Agresivo, experto en armas pesadas y leal a su escuadrón.',
       details: { aparicion: 'Verrückt', rol: 'Infantería', universo: 'Éter Aislado' }
     },
     {
       id: 3,
+      name: 'Nikolai Belinski',
+      status: 'Fallecido',
+      faction: 'Ultimis / Primis',
+      image: 'https://static.wikia.nocookie.net/callofduty/images/8/81/Nikolai_BO4.png',
+      description: 'Soldado del Ejército Rojo con afición al vodka. Pieza clave en la resolución de la historia del Éter.',
+      details: { aparicion: 'Shi No Numa', rol: 'Infantería', universo: 'Éter Aislado' }
+    },
+    {
+      id: 4,
+      name: 'Takeo Masaki',
+      status: 'Fallecido',
+      faction: 'Ultimis / Primis',
+      image: 'https://static.wikia.nocookie.net/callofduty/images/d/d8/Takeo_BO4.png',
+      description: 'Capitán del Ejército Imperial Japonés. Guiado por un estricto código de honor del Bushido.',
+      details: { aparicion: 'Shi No Numa', rol: 'Oficial', universo: 'Éter Aislado' }
+    },
+    {
+      id: 5,
       name: 'Samantha Maxis',
       status: 'Vivo',
       faction: 'Requiem / Éter Oscuro',
-      image: 'https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=600&q=80',
+      image: 'https://static.wikia.nocookie.net/callofduty/images/2/22/Samantha_ColdWar.png',
       description: 'Hija de Ludvig Maxis. Atrapada en la pirámide de la Luna, obtuvo poderes oscuros telequinéticos.',
       details: { aparicion: 'Der Riese', rol: 'Entidad', universo: 'Dark Aether' }
     }
@@ -39,7 +57,7 @@ const ZOMBIES_DATA = {
       id: 101,
       name: 'Kino der Toten',
       game: 'Black Ops 1',
-      image: 'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=600&q=80',
+      image: 'https://static.wikia.nocookie.net/callofduty/images/f/f9/Kino_Der_Toten_Loading_Screen_BOIII.png',
       description: 'Un teatro alemán abandonado convertido en centro de pruebas del Grupo 935. Famoso por su proyector y teletransportador.',
       details: { ubicacion: 'Alemania', trampa: 'Torreta Eléctrica', perk: 'Juggernog' }
     },
@@ -47,9 +65,17 @@ const ZOMBIES_DATA = {
       id: 102,
       name: 'Der Riese',
       game: 'World at War',
-      image: 'https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=600&q=80',
+      image: 'https://static.wikia.nocookie.net/callofduty/images/d/d5/Der_Riese_Loading_Screen_WaW.png',
       description: 'Instalación principal de investigación donde se creó la máquina Pack-a-Punch y la Wunderwaffe DG-2.',
       details: { ubicacion: 'Breslau', innovacion: 'Pack-a-Punch', icono: 'Wunderwaffe' }
+    },
+    {
+      id: 103,
+      name: 'Origins',
+      game: 'Black Ops 2',
+      image: 'https://static.wikia.nocookie.net/callofduty/images/2/2f/Origins_loading_screen_BO2.png',
+      description: 'Ubicado en el norte de Francia durante la Primera Guerra Mundial. Introdujo los cuatro bastones elementales y los gigantes.',
+      details: { ubicacion: 'Francia', elemento: 'Bastones Elementales', enemigo: 'Panzer Soldat' }
     }
   ],
   armas: [
@@ -57,7 +83,7 @@ const ZOMBIES_DATA = {
       id: 201,
       name: 'Ray Gun (Arma de Rayos)',
       category: 'Arma Maravilla',
-      image: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=600&q=80',
+      image: 'https://static.wikia.nocookie.net/callofduty/images/3/3d/Ray_Gun_BO4.png',
       description: 'El arma de energía icónica diseñada por H. Porter. Dispara proyectiles de plasma verde con alto daño de área.',
       details: { municion: 'Energía 115', mejorada: 'Porter X2 Ray Gun', dano: 'Extremo' }
     },
@@ -65,9 +91,17 @@ const ZOMBIES_DATA = {
       id: 202,
       name: 'Wunderwaffe DG-2',
       category: 'Arma Maravilla',
-      image: 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=600&q=80',
+      image: 'https://static.wikia.nocookie.net/callofduty/images/5/5a/Wunderwaffe_DG-2_BO3.png',
       description: 'Genera descargas eléctricas en cadena capaces de eliminar hasta 10 zombis de un solo disparo.',
       details: { creador: 'Richtofen', capacidad: '3 Disparos', mejorada: 'DG-3 Juggernaut' }
+    },
+    {
+      id: 203,
+      name: 'Monkey Bomb',
+      category: 'Equipamiento Táctico',
+      image: 'https://static.wikia.nocookie.net/callofduty/images/e/e0/Cymbal_Monkey_BO4.png',
+      description: 'Un mono de juguete con platillos que atrae a las hordas de zombis tocando una melodía antes de explotar.',
+      details: { efecto: 'Atracción en masa', tipo: 'Táctica', uso: 'Salvavidas' }
     }
   ]
 };
