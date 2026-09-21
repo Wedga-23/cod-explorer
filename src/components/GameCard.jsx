@@ -30,6 +30,10 @@ export function GameCard({ item, type, onSelect }) {
       <img
         src={item.image}
         alt={item.name}
+        onError={(e) => {
+          e.target.onerror = null;
+          e.target.src = 'https://picsum.photos/600/400?blur=2';
+        }}
         style={{ width: '100%', height: '180px', objectFit: 'cover' }}
       />
       <div style={{ padding: '15px', display: 'flex', flexDirection: 'column', gap: '8px' }}>
