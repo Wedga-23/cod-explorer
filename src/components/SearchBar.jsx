@@ -1,21 +1,21 @@
 export function SearchBar({ searchTerm, setSearchTerm }) {
   return (
-    <div style={{ marginBottom: '30px', display: 'flex', justifyContent: 'center' }}>
+    <div style={{ margin: '25px 0', display: 'flex', justifyContent: 'center' }}>
       <input
         type="text"
-        placeholder="Buscar personaje (ej. Richtofen, Dempsey)..."
+        placeholder="Buscar en el archivo..."
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
         style={{
           width: '100%',
-          maxWidth: '500px',
-          padding: '12px 20px',
-          fontSize: '16px',
-          borderRadius: '25px',
+          maxWidth: '550px',
+          padding: '12px 18px',
+          borderRadius: '8px',
           border: '1px solid #334155',
           backgroundColor: '#1e293b',
-          color: '#fff',
-          outline: 'none'
+          color: '#f8fafc',
+          outline: 'none',
+          fontSize: '0.95rem'
         }}
       />
     </div>

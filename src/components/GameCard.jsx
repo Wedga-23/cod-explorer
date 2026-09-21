@@ -1,51 +1,58 @@
-export function GameCard({ character }) {
-  // Configuración de color para el estado (Status dot)
-  const isAlive = character.status.toLowerCase() === 'vivo';
-  const statusColor = isAlive ? '#22c55e' : '#ef4444';
+export function GameCard({ item, type, onSelect }) {
+  const getStatusColor = (status) => {
+    if (status === 'Vivo') return '#22c55e';
+    if (status === 'Fallecido') return '#ef4444';
+    return '#eab308';
+  };
 
   return (
-    <div style={{
-      backgroundColor: '#1e293b',
-      borderRadius: '12px',
-      overflow: 'hidden',
-      boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.5)',
-      display: 'flex',
-      flexDirection: 'column',
-      color: '#f8fafc'
-    }}>
+    <div 
+      onClick={() => onSelect(item)}
+      style={{
+        backgroundColor: '#182232',
+        borderRadius: '10px',
+        overflow: 'hidden',
+        border: '1px solid #283548',
+        cursor: 'pointer',
+        transition: 'transform 0.2s, border-color 0.2s',
+        display: 'flex',
+        flexDirection: 'column'
+      }}
+      onMouseEnter={(e) => {
+        e.currentTarget.style.transform = 'translateY(-4px)';
+        e.currentTarget.style.borderColor = '#ef4444';
+      }}
+      onMouseLeave={(e) => {
+        e.currentTarget.style.transform = 'translateY(0)';
+        e.currentTarget.style.borderColor = '#283548';
+      }}
+    >
       <img
-        src={character.image}
-        alt={character.name}
-        style={{ width: '100%', height: '220px', objectFit: 'cover' }}
+        src={item.image}
+        alt={item.name}
+        style={{ width: '100%', height: '180px', objectFit: 'cover' }}
       />
-      <div style={{ padding: '16px', display: 'flex', flexDirection: 'column', gap: '12px' }}>
-        <div>
-          <h3 style={{ margin: '0 0 6px 0', fontSize: '1.25rem', color: '#fff' }}>{character.name}</h3>
-          <p style={{ margin: 0, display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.9rem', color: '#cbd5e1' }}>
-            <span style={{
-              height: '9px',
-              width: '9px',
-              backgroundColor: statusColor,
-              borderRadius: '50%',
-              display: 'inline-block'
-            }}></span>
-            {character.status} - {character.faction}
-          </p>
-        </div>
+      <div style={{ padding: '15px', display: 'flex', flexDirection: 'column', gap: '8px' }}>
+        <h3 style={{ margin: 0, color: '#f8fafc', fontSize: '1.1rem' }}>{item.name}</h3>
+        
+        {type === 'personajes' && (
+          <div style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '0.85rem', color: '#94a3b8' }}>
+            <span style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: getStatusColor(item.status) }}></span>
+            {item.status} • {item.faction}
+          </div>
+        )}
 
-        <div>
-          <span style={{ fontSize: '0.75rem', color: '#94a3b8', textTransform: 'uppercase', fontWeight: 'bold' }}>
-            Primera Aparición
-          </span>
-          <p style={{ margin: '2px 0 0 0', fontSize: '0.9rem', color: '#f1f5f9' }}>{character.firstAppeared}</p>
-        </div>
+        {type === 'mapas' && (
+          <p style={{ margin: 0, fontSize: '0.85rem', color: '#94a3b8' }}>Juego: {item.game}</p>
+        )}
 
-        <div>
-          <span style={{ fontSize: '0.75rem', color: '#94a3b8', textTransform: 'uppercase', fontWeight: 'bold' }}>
-            Ubicación / Mapa Icónico
-          </span>
-          <p style={{ margin: '2px 0 0 0', fontSize: '0.9rem', color: '#f1f5f9' }}>{character.location}</p>
-        </div>
+        {type === 'armas' && (
+          <p style={{ margin: 0, fontSize: '0.85rem', color: '#94a3b8' }}>Tipo: {item.category}</p>
+        )}
+
+        <span style={{ fontSize: '0.75rem', color: '#ef4444', fontWeight: 'bold', marginTop: '5px' }}>
+          Ver detalles →
+        </span>
       </div>
     </div>
   );
