@@ -37,7 +37,7 @@ export default function App() {
             ⚙️🪚💀 Gears of War Explorer
           </h1>
           <p style={{ color: "#aaa", margin: 0, fontSize: "1rem" }}>
-            Catálogo de videojuegos consultando RAWG API
+            Catálogo de videojuego Gears of War Explorer
           </p>
 
           {/* Buscador */}

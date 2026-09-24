@@ -256,7 +256,7 @@ export function GameModal({ gameId, onClose }) {
               }}
             >
               <strong style={{ color: "#fff", display: "block", marginBottom: "0.4rem", textTransform: "uppercase", fontSize: "0.85rem", letterSpacing: "0.5px" }}>
-                📝 Sinopsis Oficial:
+                 Sinopsis Oficial:
               </strong>
               {getDescriptionInSpanish(game)}
             </div>
